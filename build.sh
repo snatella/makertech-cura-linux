@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
 
-version=4.1.0
-appname=Ultimaker_Cura
+version=3.6.0
+appname=Cura
 
 which wget 2>&1 > /dev/null
 
