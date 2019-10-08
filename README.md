@@ -13,6 +13,14 @@ Pre-requisites:
 
 As the Cura images appear to be AppImage v1 mount is required to extract the contents. See build.sh if concerned ;-)
 
+## Usage
+
+It's hopefully as simple as
+
+```./build.sh```
+
+And you should get a `build` folder with your complete `*.MT.AppImage`
+
 ## Bundled resources
 
 The bundled `resources` are taken from Windows Makertech Cura 3.6.2
