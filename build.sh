@@ -17,7 +17,7 @@ fi
 
 cd build
 
-rm -f $appname-$version.MT.AppImage
+rm -f "$appname-$version.MT.AppImage"
 
 if [[ ! -f "$appname-$version.AppImage" ]]; then
     wget https://github.com/Ultimaker/Cura/releases/download/$version/$appname-$version.AppImage
@@ -33,21 +33,21 @@ echo "Mounting to extract Cura AppImage, sudo password may be required."
 
 mkdir tmproot
 
-sudo mount $appname-$version.AppImage tmproot
+sudo mount "$appname-$version.AppImage" tmproot
 
-cp -r tmproot/ $appname-$version
+cp -r tmproot/ "$appname-$version"
 
 sudo umount tmproot
 
 rmdir tmproot
 
-cp -r ../resources/* $appname-$version/usr/bin/resources/
+cp -r ../resources/* "$appname-$version/usr/bin/resources/"
 
-appimagetool-x86_64.AppImage $appname-$version $appname-$version.MT.AppImage
+appimagetool-x86_64.AppImage "$appname-$version" "$appname-$version.MT.AppImage"
 
-chmod +x $appname-$version.MT.AppImage
+chmod +x "$appname-$version.MT.AppImage"
 
-rm -rf $appname-$version/
+rm -rf "$appname-$version/"
 
 echo
 echo
